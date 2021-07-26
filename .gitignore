@@ -45,6 +45,10 @@
 SourceArt/**/*.png
 SourceArt/**/*.tga
 
+Content/MixamoAnimPack/
+Content/CraftResourcesIcons/
+#Content/StarterContent/
+
 # Binary Files
 Binaries/*
 Plugins/*/Binaries/*
