@@ -1,0 +1,40 @@
+-===== AI =====-
+
+array of options
+
+loop: row
+	loop: col
+	
+		for direction: UP,DOWN,LEFT,RIGHT
+			
+			move -> [row,col] [direction]
+		
+			check for complete rows > 0
+			
+				add to array of options
+				
+				
+
+loop: [options]
+
+	if		(AI = easy)
+	
+				if (options): get first options
+				
+				else: random
+		
+			(AI = medium)
+			
+				if (your options): get first option that is your spell
+					
+				else if (options): get first option
+				
+				else: random
+				
+			(AI = hard)
+			
+				if (options): sort options by a compareTo (note: crit weighted higher if there is a really good option and lower towards late combat)
+					
+				else: move a tile that won't setup the player
+		 
+			
