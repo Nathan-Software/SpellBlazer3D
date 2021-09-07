@@ -3,22 +3,19 @@
 
 #include "MyBlueprintFunctionLibrary.h"
 
-FString UMyBlueprintFunctionLibrary::HelloUnreal( int a, int b)
+FString UMyBlueprintFunctionLibrary::HelloUnreal(int x, int y, int z)
 {
 
-	int foo = a + b;
+	int foo = x * y * z;
 
-	return (FString::Printf(TEXT("Hello Unreal, also %d + %d = %d"), a, b, foo));
+	return (FString::Printf(TEXT("Firing C++, also %d * %d * %d = %d"), x, y, z, foo));
 }
 
-void UMyBlueprintFunctionLibrary::CallBluePrintBoardFunction()
+void UMyBlueprintFunctionLibrary::HelloCPlusPlus(UObject* blueprintActor)
 {
 
 	FOutputDeviceNull ar;
-	const FString command = FString::Printf(TEXT("SetLifting true"));
 
-	if (blueprintActor) {
+	blueprintActor->CallFunctionByNameWithArguments(TEXT("TestMethod"), ar, NULL, true);
 
-		blueprintActor->CallFunctionByNameWithArguments(*command, ar, NULL, true);
-	}
 }

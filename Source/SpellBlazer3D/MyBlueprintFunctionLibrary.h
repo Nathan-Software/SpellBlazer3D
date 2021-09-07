@@ -16,10 +16,10 @@ class SPELLBLAZER3D_API UMyBlueprintFunctionLibrary : public UBlueprintFunctionL
 	GENERATED_BODY()
 
 		UFUNCTION(BlueprintCallable, Category = "MyCategory")
-		static FString HelloUnreal(int a, int b);
+		static FString HelloUnreal(int x, int y, int z);
 
-
-	void CallBluePrintBoardFunction() ;
+		UFUNCTION(BlueprintCallable, Category = "MyCategory")
+		static void HelloCPlusPlus(UObject* blueprintActor);
 
 
 	UPROPERTY(EditAnywhere, Category = "BoardClass")
